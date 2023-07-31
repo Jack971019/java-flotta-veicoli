@@ -1,19 +1,17 @@
 package Org.Lessons.Java.Veicles;
 
-import java.time.LocalDate;
-
-public class Motorcycle extends Veicles{
+public class Motorcycle extends Veicle {
     private boolean easel;
 
 
-    public Motorcycle(String licensePlate, LocalDate yearOfEnrollment, boolean easel) {
+    public Motorcycle(String licensePlate, int yearOfEnrollment, boolean easel) {
         super(licensePlate, yearOfEnrollment);
         this.easel = easel;
     }
 
     @Override
     public String toString() {
-        return "Motorcycle{" +
+        return super.toString()+"Motorcycle{" +
                 "easel=" + easel +
                 '}';
     }

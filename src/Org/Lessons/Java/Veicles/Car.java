@@ -1,20 +1,17 @@
 package Org.Lessons.Java.Veicles;
 
-import java.time.LocalDate;
-
-public class Car extends Veicles{
+public class Car extends Veicle {
 
     private int numOfDors;
 
-
-    public Car(String licensePlate, LocalDate yearOfEnrollment) {
+    public Car(String licensePlate, int yearOfEnrollment, int numOfDors) {
         super(licensePlate, yearOfEnrollment);
         this.numOfDors = numOfDors;
     }
 
     @Override
     public String toString() {
-        return "Car{" +
+        return super.toString()+"Car{" +
                 "numOfDors=" + numOfDors +
                 '}';
     }

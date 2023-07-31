@@ -1,57 +1,82 @@
 package Org.Lessons.Java.Veicles;
 
+
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class GestoreFlotta {
-    public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+    /*aggiungere nuovi veicoli alla flotta
+    contare quanti veicoli ci sono di un determinato tipo (automobile o motocicletta)
+    trovare un veicolo specifico tramite il numero di targa */
 
-        ArrayList<Veicles> veiclesList = new ArrayList<>();
-
-        boolean keepGoing = true;
-
-        while (keepGoing) {
-            System.out.println("do you want to add a veicle to the list? Y/N");
-            String userAnswer = scan.nextLine();
+    ArrayList<Veicle> veiclesList = new ArrayList<>();
 
 
-            if (userAnswer.equalsIgnoreCase("Y")) {
 
-                System.out.println("digit veicle's license plate");
-                String licensePlate = scan.nextLine();
-                System.out.println("digit veicle's year of enrollment");
-                int yearOfEnrollment = scan.nextInt();
+    ArrayList<Veicle> getVeiclesList(){
+        return veiclesList;
+    }
 
-                System.out.println("are you adding a motocycle or a car? digit c for car or motor for motorcycle C/M");
-                String userChoice = scan.nextLine();
+    void addVeicle(Veicle veicle){
+        String numOfLicensePlate = veicle.getLicensePlate();
+        veiclesList.add(veicle);
+    }
 
-                if (userChoice.equalsIgnoreCase("c")){
-                    System.out.println("digit numbers of dors");
-                    int numbOfDors = scan.nextInt();
+    int carCounter;
 
-                    Veicles veicle = new
-                } else if (userChoice.equalsIgnoreCase("motor")) {
-                    System.out.println("does it have an easel?  Y/N");
-                    boolean easel = scan.nextBoolean();
-                    Veicles veicle = new Veicles(licensePlate, yearOfEnrollment, easel);
+    int motorCounter;
 
-                }
+    void counterOfveicles(){
+        carCounter = 0;
+        motorCounter = 0;
 
+        for (Veicle veicle : veiclesList){
 
-            } else if (userAnswer.equalsIgnoreCase("N")) {
-                keepGoing = false;
+            if (veicle instanceof Car){
+                carCounter++;
+            } else if (veicle instanceof Motorcycle) {
+                motorCounter ++;
 
-            } else {
-                System.out.println("invalid choice");
-                break;
             }
+
+        }
+    }
+
+
+
+
+
+    /*int getMotorCounter (){
+        return motorCounter;
+    }
+
+    void typeCounter(){
+        carCounter = 0;
+        motorCounter = 0;
+        for (carCounter = 0, getVeiclesList().size(), carCounter ++;;){
 
 
         }
 
+        boolean findLicensePlate{
+            boolean found = false;
+            for (Veicle veicle : veiclesList){
+
+            }
+        }
+    }*/
+
+
+
+
+
+
+
+
+
+
+
 
     }
-}
+
 

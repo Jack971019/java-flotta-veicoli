@@ -1,17 +1,15 @@
 package Org.Lessons.Java.Veicles;
 
-import java.time.LocalDate;
-
-public class Veicles {
+public class Veicle {
 
     // ATTRIBUTI
     private String licensePlate;
 
-    private LocalDate yearOfEnrollment;
+    private int yearOfEnrollment;
 
     // COSTRUTTORI
 
-    public Veicles(String licensePlate, LocalDate yearOfEnrollment) {
+    public Veicle(String licensePlate, int yearOfEnrollment) {
         this.licensePlate = licensePlate;
         this.yearOfEnrollment = yearOfEnrollment;
     }
@@ -30,11 +28,11 @@ public class Veicles {
         this.licensePlate = licensePlate;
     }
 
-    public LocalDate getYearOfEnrollment() {
+    public int getYearOfEnrollment() {
         return yearOfEnrollment;
     }
 
-    public void setYearOfEnrollment(LocalDate yearOfEnrollment) {
+    public void setYearOfEnrollment(int yearOfEnrollment) {
         this.yearOfEnrollment = yearOfEnrollment;
     }
 
