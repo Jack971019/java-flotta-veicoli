@@ -9,6 +9,10 @@ public class Car extends Veicle {
         this.numOfDors = numOfDors;
     }
 
+    public int getNumOfDors() {
+        return numOfDors;
+    }
+
     @Override
     public String toString() {
         return super.toString()+"Car{" +

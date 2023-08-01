@@ -9,6 +9,10 @@ public class Motorcycle extends Veicle {
         this.easel = easel;
     }
 
+    public boolean isEasel() {
+        return easel;
+    }
+
     @Override
     public String toString() {
         return super.toString()+"Motorcycle{" +
